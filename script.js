@@ -49,7 +49,7 @@ function checkNumber(msg) {
 
 
 
-//edge case but doesn't work D:
+//edge case
 if (msg === 'one' || msg === 'won') {
     num = 1
 } else if (msg === 'two') {
@@ -101,8 +101,7 @@ else if (msg === 'nine') {
     //getting it right
     if (num === randomNum) {
       const h2 = document.createElement('h2');
-      h2.textContent = `Congrats! You have guessed the number! It was ${num}`;
-  
+      h2.textContent = `Congrats! Now multiply it by 1000 for the actual number! You guessed ${num}`;
       const button = document.createElement('button');
       button.classList.add('play-again');
       button.id = 'play-again';
@@ -116,13 +115,13 @@ else if (msg === 'nine') {
       //getting it wrong
     } else if (num > randomNum) {
       const div = document.createElement('div');
-      div.textContent = 'A LITTLE LOWER';
+      div.textContent = 'Oh gosh that is way too many';
         msgEl.innerHTML = '';
       msgEl.append(div);
     } else {
       // if (num < randomNum)
       const div = document.createElement('div');
-      div.textContent = 'A LITTLE HIGHER';
+      div.textContent = 'I Heckin LOVE BURGERS! A LITTLE HIGHER';
         msgEl.innerHTML = '';
       msgEl.append(div);
     }
